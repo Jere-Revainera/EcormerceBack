@@ -39,21 +39,17 @@ async function getProducts(req, res, next) {
 
 async function createProduct(req, res, next) {
   try {
-    const { title, price, stock } = req.body;
-    let { category, supplier } = req.query;
-    if (!category) {
-      category = "none";
-    }
-    if (!supplier) {
-      supplier = "none";
-    }
+    const { title, price, stock, photo, category, supplier } = req.body;
+    const productSupplier = supplier? supplier:"none";
+    const productCategory = category? category:"none";
     
     const response = await productsManager.create({
       title,
       price,
       stock,
-      category,
-      supplier,
+      photo,
+      category : productCategory,
+      supplier : productSupplier,
     });
     return res.status(201).json({ message: "Product created", response });
   } catch (error) {

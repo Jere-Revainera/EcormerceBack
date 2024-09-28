@@ -7,7 +7,6 @@ import {
   destroyProduct,
 } from "../../controllers/products.controller.js";
 import isValidDataProd from "../../middlewares/isValidDataProd.mid.js";
-import isValidDataProd from './../../middlewares/isValidDataProd.mid';
 
 const productsApiRouter = Router()
 

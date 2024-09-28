@@ -39,17 +39,16 @@ async function getUsers(req, res, next) {
 
 async function createUser(req, res, next) {
   try {
-    const { name, surname, mail, password, photo } = req.body;
-    let {role} = req.query;
-     if(!role) {
-      role ="none"
-     }
+    const { name, surname, mail, password, photo,role  } = req.body;
+  const userRoler = role? role : "none";
+
     const response = await usersManager.create({
       name,
       surname,
       mail,
       password,
       photo,
+      role :userRoler,
     });
     return res.status(201).json({ message: "User created", response });
   } catch (error) {

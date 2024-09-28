@@ -1,243 +1,38 @@
 [
-    {
-      "name": "Lucas",
-      "surname": "Gómez",
-      "mail": "lucas.gomez@example.com",
-      "password": "password123"
-    },
-    {
-      "name": "Martina",
-      "surname": "Pérez",
-      "mail": "martina.perez@example.com",
-      "password": "securePass456"
-    },
-    {
-      "name": "Sofía",
-      "surname": "Fernández",
-      "mail": "sofia.fernandez@example.com",
-      "password": "fernandez789"
-    },
-    {
-      "name": "Mateo",
-      "surname": "Rodríguez",
-      "mail": "mateo.rodriguez@example.com",
-      "password": "rodriguezPass1"
-    },
-    {
-      "name": "Valentina",
-      "surname": "López",
-      "mail": "valentina.lopez@example.com",
-      "password": "valentinaPass!"
-    },
-    {
-      "name": "Santiago",
-      "surname": "Martínez",
-      "mail": "santiago.martinez@example.com",
-      "password": "martinez2024"
-    },
-    {
-      "name": "Camila",
-      "surname": "García",
-      "mail": "camila.garcia@example.com",
-      "password": "garciaPassword1"
-    },
-    {
-      "name": "Julieta",
-      "surname": "Hernández",
-      "mail": "julieta.hernandez@example.com",
-      "password": "hernandez987"
-    },
-    {
-      "name": "Tomás",
-      "surname": "Álvarez",
-      "mail": "tomas.alvarez@example.com",
-      "password": "tomasSecurePass"
-    },
-    {
-      "name": "Agustina",
-      "surname": "Gutiérrez",
-      "mail": "agustina.gutierrez@example.com",
-      "password": "agustina@pass"
-    },
-    {
-      "name": "Pedro",
-      "surname": "Muñoz",
-      "mail": "pedro.munoz@example.com",
-      "password": "pedro_pass45"
-    },
-    {
-      "name": "Lucía",
-      "surname": "Silva",
-      "mail": "lucia.silva@example.com",
-      "password": "lucia_abc123"
-    },
-    {
-      "name": "Emilio",
-      "surname": "Moreno",
-      "mail": "emilio.moreno@example.com",
-      "password": "morenoSecure123"
-    },
-    {
-      "name": "Clara",
-      "surname": "Ramos",
-      "mail": "clara.ramos@example.com",
-      "password": "clara!pass9"
-    },
-    {
-      "name": "Ignacio",
-      "surname": "Ruiz",
-      "mail": "ignacio.ruiz@example.com",
-      "password": "ignacioPass#"
-    },
-    {
-      "name": "Carolina",
-      "surname": "Vargas",
-      "mail": "carolina.vargas@example.com",
-      "password": "vargas_Pass123"
-    },
-    {
-      "name": "Fernando",
-      "surname": "Gómez",
-      "mail": "fernando.gomez@example.com",
-      "password": "fernando789"
-    },
-    {
-      "name": "María",
-      "surname": "Cruz",
-      "mail": "maria.cruz@example.com",
-      "password": "mariaCruzPass!"
-    },
-    {
-      "name": "Joaquín",
-      "surname": "Santos",
-      "mail": "joaquin.santos@example.com",
-      "password": "joaquin_santos_1"
-    },
-    {
-      "name": "Alicia",
-      "surname": "Romero",
-      "mail": "alicia.romero@example.com",
-      "password": "aliciaSecure@pass"
-    },
-    {
-      "name": "Nicolás",
-      "surname": "Ortiz",
-      "mail": "nicolas.ortiz@example.com",
-      "password": "nicolasSecure!"
-    },
-    {
-      "name": "Victoria",
-      "surname": "Suárez",
-      "mail": "victoria.suarez@example.com",
-      "password": "victoriaSecure2024"
-    },
-    {
-      "name": "Franco",
-      "surname": "Flores",
-      "mail": "franco.flores@example.com",
-      "password": "floresPass1234"
-    },
-    {
-      "name": "Daniela",
-      "surname": "Mendoza",
-      "mail": "daniela.mendoza@example.com",
-      "password": "mendoza2024!"
-    },
-    {
-      "name": "Manuel",
-      "surname": "Rojas",
-      "mail": "manuel.rojas@example.com",
-      "password": "rojas_secure!"
-    },
-    {
-      "name": "Natalia",
-      "surname": "Castro",
-      "mail": "natalia.castro@example.com",
-      "password": "natalia@secure1"
-    },
-    {
-      "name": "Ramiro",
-      "surname": "Figueroa",
-      "mail": "ramiro.figueroa@example.com",
-      "password": "figueroa_pass45"
-    },
-    {
-      "name": "Carla",
-      "surname": "Campos",
-      "mail": "carla.campos@example.com",
-      "password": "carlaSecure789"
-    },
-    {
-      "name": "Leonardo",
-      "surname": "Peña",
-      "mail": "leonardo.pena@example.com",
-      "password": "penaPassword123"
-    },
-    {
-      "name": "Florencia",
-      "surname": "Sosa",
-      "mail": "florencia.sosa@example.com",
-      "password": "florencia_2024!"
-    },
-    {
-      "name": "Julián",
-      "surname": "Díaz",
-      "mail": "julian.diaz@example.com",
-      "password": "julianPass!"
-    },
-    {
-      "name": "Micaela",
-      "surname": "Cáceres",
-      "mail": "micaela.caceres@example.com",
-      "password": "micaela_secure!"
-    },
-    {
-      "name": "Gastón",
-      "surname": "Navarro",
-      "mail": "gaston.navarro@example.com",
-      "password": "navarro123"
-    },
-    {
-      "name": "Paula",
-      "surname": "Espinoza",
-      "mail": "paula.espinoza@example.com",
-      "password": "espinoza2024"
-    },
-    {
-      "name": "Bruno",
-      "surname": "Rivera",
-      "mail": "bruno.rivera@example.com",
-      "password": "bruno_rivera_1"
-    },
-    {
-      "name": "Gisela",
-      "surname": "Luna",
-      "mail": "gisela.luna@example.com",
-      "password": "giselaPassword!"
-    },
-    {
-      "name": "Sebastián",
-      "surname": "Ibáñez",
-      "mail": "sebastian.ibanez@example.com",
-      "password": "sebastian_secure_1"
-    },
-    {
-      "name": "Ana",
-      "surname": "Vega",
-      "mail": "ana.vega@example.com",
-      "password": "ana_vega_Pass!"
-    },
-    {
-      "name": "Diego",
-      "surname": "Correa",
-      "mail": "diego.correa@example.com",
-      "password": "correa_secure123"
-    },
-    {
-      "name": "Melina",
-      "surname": "Cabrera",
-      "mail": "melina.cabrera@example.com",
-      "password": "melina123!"
-    }
-  ]
-  
+  {
+    "name": "Mariano",
+    "surname": "Mias",
+    "mail": "marianosmias@gmail.com",
+    "password": "Mariano123",
+    "photo": "https://www.bing.com/images/search?view=detailV2&ccid=j%2feWpTRq&id=04F4B07760C397F7C3728DAF709D7D66A9C141A2&thid=OIP.j_eWpTRqrOOdRgcSmcQv0gHaHp&mediaurl=https%3a%2f%2fi.pinimg.com%2f736x%2fb1%2f6c%2ff3%2fb16cf30a73e39f9b8819bd9b61ff6b09.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.8ff796a5346aace39d46071299c42fd2%3frik%3dokHBqWZ9nXCvjQ%26pid%3dImgRaw%26r%3d0&exph=660&expw=639&q=Foto+De+Perfil+De&simid=608051801027136205&FORM=IRPRST&ck=46BE3307C23E1BB061D7E63BA1EF0D8B&selectedIndex=49&itb=0",
+    "role": "none",
+    "id": "2f0a6b105ad9d390ecd82ff3"
+  },
+  {
+    "name": "Jere",
+    "surname": "Mias",
+    "mail": "Jeremias@gmail.com",
+    "password": "Jere123",
+    "photo": "https://www.bing.com/images/search?view=detailV2&ccid=j%2feWpTRq&id=04F4B07760C397F7C3728DAF709D7D66A9C141A2&thid=OIP.j_eWpTRqrOOdRgcSmcQv0gHaHp&mediaurl=https%3a%2f%2fi.pinimg.com%2f736x%2fb1%2f6c%2ff3%2fb16cf30a73e39f9b8819bd9b61ff6b09.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.8ff796a5346aace39d46071299c42fd2%3frik%3dokHBqWZ9nXCvjQ%26pid%3dImgRaw%26r%3d0&exph=660&expw=639&q=Foto+De+Perfil+De&simid=608051801027136205&FORM=IRPRST&ck=46BE3307C23E1BB061D7E63BA1EF0D8B&selectedIndex=49&itb=0",
+    "role": "none",
+    "id": "3cafbdbe36afae26b4345d64"
+  },
+  {
+    "name": "pepe",
+    "surname": "Mias",
+    "mail": "PepeMias@gmail.com",
+    "password": "Pepe123",
+    "photo": "https://www.bing.com/images/search?view=detailV2&ccid=j%2feWpTRq&id=04F4B07760C397F7C3728DAF709D7D66A9C141A2&thid=OIP.j_eWpTRqrOOdRgcSmcQv0gHaHp&mediaurl=https%3a%2f%2fi.pinimg.com%2f736x%2fb1%2f6c%2ff3%2fb16cf30a73e39f9b8819bd9b61ff6b09.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.8ff796a5346aace39d46071299c42fd2%3frik%3dokHBqWZ9nXCvjQ%26pid%3dImgRaw%26r%3d0&exph=660&expw=639&q=Foto+De+Perfil+De&simid=608051801027136205&FORM=IRPRST&ck=46BE3307C23E1BB061D7E63BA1EF0D8B&selectedIndex=49&itb=0",
+    "role": "none",
+    "id": "11f2af526e49af48a6f12fa1"
+  },
+  {
+    "name": "Carla",
+    "surname": "Mias",
+    "mail": "CarlaMias@gmail.com",
+    "password": "Carla123",
+    "photo": "https://www.bing.com/images/search?view=detailV2&ccid=j%2feWpTRq&id=04F4B07760C397F7C3728DAF709D7D66A9C141A2&thid=OIP.j_eWpTRqrOOdRgcSmcQv0gHaHp&mediaurl=https%3a%2f%2fi.pinimg.com%2f736x%2fb1%2f6c%2ff3%2fb16cf30a73e39f9b8819bd9b61ff6b09.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.8ff796a5346aace39d46071299c42fd2%3frik%3dokHBqWZ9nXCvjQ%26pid%3dImgRaw%26r%3d0&exph=660&expw=639&q=Foto+De+Perfil+De&simid=608051801027136205&FORM=IRPRST&ck=46BE3307C23E1BB061D7E63BA1EF0D8B&selectedIndex=49&itb=0",
+    "role": "userVip",
+    "id": "d79d29e18496cf552a1d50d8"
+  }
+]

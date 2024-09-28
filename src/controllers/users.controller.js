@@ -72,7 +72,7 @@ async function updateUser(req, res, next) {
   }
 }
 
-async function destroyUser(req, res, next) {
+async function deleteUser(req, res, next) {
   try {
     const { pid } = req.params;
     const responseManager = await usersManager.delete(pid);
@@ -128,7 +128,7 @@ export {
   createUser,
   getUsers,
   getAllUsers,
-  destroyUser,
+  deleteUser,
   updateUser,
   showOneUser,
   showUsers,

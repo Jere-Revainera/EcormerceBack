@@ -75,10 +75,10 @@ async function updateProduct(req, res, next) {
   }
 }
 
-async function destroyProduct(req, res, next) {
+async function deleteProduct(req, res, next) {
   try {
     const { pid } = req.params;
-    const responseManager = await productsManager.delate(pid);
+    const responseManager = await productsManager.delete(pid);
     if (!responseManager) {
       const error = new Error(`Product with id ${pid} not found`);
       error.statusCode = 404;
@@ -134,7 +134,7 @@ export {
   getProducts,
   createProduct,
   updateProduct,
-  destroyProduct,
+  deleteProduct,
   showOneProduct,
   showProducts,
 };

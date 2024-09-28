@@ -4,7 +4,7 @@ import {
   getProducts,
   createProduct,
   updateProduct,
-  destroyProduct,
+  deleteProduct,
 } from "../../controllers/products.controller.js";
 import isValidDataProd from "../../middlewares/isValidDataProd.mid.js";
 
@@ -14,6 +14,6 @@ productsApiRouter.get("/", getAllProducts);
 productsApiRouter.get("/:pid", getProducts);
 productsApiRouter.post("/", isValidDataProd, createProduct);
 productsApiRouter.put("/:pid", updateProduct)
-productsApiRouter.delete("/:pid", destroyProduct)
+productsApiRouter.delete("/:pid", deleteProduct)
 
 export default productsApiRouter

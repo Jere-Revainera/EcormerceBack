@@ -74,7 +74,7 @@ class UsersManager {
     }
   }
 
-  async destroy(id) {
+  async delete(id) {
     try {
       const all = await this.readAll();
       const filteredUsers = all.filter((user) => user.id !== id);

@@ -76,7 +76,7 @@ class ProductsManager {
     }
   }
 
-  async destroy(id) {
+  async delete(id) {
     try {
       const all = await this.readAll();
       const filterdProducts = all.filter((product) => product.id !== id);

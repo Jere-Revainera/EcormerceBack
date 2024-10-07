@@ -1,7 +1,7 @@
 import crypto from "crypto";
 import fs from "fs";
 
-class ProductsManager {
+class UsersManager {
   constructor(path) {
     this.path = path;
     this.exists();
@@ -16,14 +16,12 @@ class ProductsManager {
     }
   }
 
-  async readAll(category) {
+  async readAll(id) {
     try {
       const data = await fs.promises.readFile(this.path, "utf-8");
       const parseData = JSON.parse(data);
-      if (category) {
-        const filterData = parseData.filter(
-          (each) => each.category === category
-        );
+      if (id) {
+        const filterData = parseData.filter((each) => each.name === id);
         return filterData;
       } else {
         return parseData;
@@ -38,9 +36,14 @@ class ProductsManager {
     try {
       const all = await this.readAll();
       const one = all.find((each) => each.id === id);
+  
+      if (!one) {
+        throw new Error(`User with id ${id} not found`);
+      }
+  
       return one;
     } catch (error) {
-      console.log(error);
+      console.error(`Error reading user with id ${id}:`, error);
       throw error;
     }
   }
@@ -62,13 +65,13 @@ class ProductsManager {
   async update(id, newData) {
     try {
       const all = await this.readAll();
-      const index = all.findIndex((product) => product.id === id);
+      const index = all.findIndex((user) => user.id === id);
       if (index === -1) {
         return null;
       }
       all[index] = { ...all[index], ...newData };
       const stringAll = JSON.stringify(all, null, 2);
-      await fs.watchFile(this.path, stringAll);
+      fs.watchFile(this.path, stringAll);
       return all[index];
     } catch (error) {
       console.log(error);
@@ -79,13 +82,13 @@ class ProductsManager {
   async delete(id) {
     try {
       const all = await this.readAll();
-      const filterdProducts = all.filter((product) => product.id !== id);
-      if (all.length === filterdProducts.length) {
+      const filteredUsers = all.filter((user) => user.id !== id);
+      if (all.length === filteredUsers.length) {
         return null;
       }
-      const stringAll = JSON.stringify(filteredProducts, null, 2);
+      const stringAll = JSON.stringify(filteredUsers, null, 2);
       await fs.promises.writeFile(this.path, stringAll);
-      return `Product with id ${id} deleted`;
+      return `User with id ${id} deleted`;
     } catch (error) {
       console.log(error);
       throw error;
@@ -93,5 +96,5 @@ class ProductsManager {
   }
 }
 
-const productsManager = new ProductsManager("./src/files/products.json");
-export default productsManager;
+const usersManager = new UsersManager("./src/files/users.json");
+export default usersManager

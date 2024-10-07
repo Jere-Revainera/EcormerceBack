@@ -1,13 +1,16 @@
-<h2> Products</h2>
+<h2 class="justifyitem-center text-center m-3 p-3 fs-2 "> Products</h2>
 
-<section class="d-flex flex-wrap justify-content-evenly">
+<section class="d-flex flex-wrap">
 {{#each products}}
- <div class="card my-3" style="width: 18rem;"></div>
+   <img src="{{this.photo}}" class="justyfyitem-center" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{this.title}}</h5>
-      <p class="card-text">{{this.category}}</p>
+      <p class="card-text">{{#if this.category}}
+        {{else}} <p>Sin categoria</p>
+        {{/if}}</p>
+        <p> $ {{this.price}}</p>
       <a href="/products/{{this.id}}" class="btn btn-success">+info</a>
     </div>
-{{#each}}
+{{/each}}
 </section>
 

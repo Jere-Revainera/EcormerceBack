@@ -1,13 +1,13 @@
-import usersManager from "./../data/user.manager.js";
+import usersManager from "../data/users.manager.js";
 
 async function getAllUsers(req, res, next) {
   try {
-    let { name } = req.query;
+    let { username } = req.query;
     let response;
-    if (!name) {
+    if (!username) {
       response = await usersManager.readAll();
     } else {
-      response = await usersManager.readAll(name);
+      response = await usersManager.readAll(username);
     }
     if (response.length > 0) {
       return res.status(200).json({ message: "User read", response });
@@ -39,12 +39,11 @@ async function getUsers(req, res, next) {
 
 async function createUser(req, res, next) {
   try {
-    const { name, surname, mail, password, photo,role  } = req.body;
-  const userRoler = role? role : "none";
+    const { username, mail, password, photo,role  } = req.body;
+  const userRoler = role || 0 ;
 
     const response = await usersManager.create({
-      name,
-      surname,
+      username,
       mail,
       password,
       photo,
@@ -58,11 +57,11 @@ async function createUser(req, res, next) {
 
 async function updateUser(req, res, next) {
   try {
-    const { pid } = req.params;
+    const { uid } = req.params;
     const newData = req.body;
-    const responseManager = await usersManager.update(pid, newData);
+    const responseManager = await usersManager.update(uid, newData);
     if (!responseManager) {
-      const error = new Error(`User with id ${pid} not found`);
+      const error = new Error(`User with id ${uid} not found`);
       error.statusCode = 404;
       throw error;
     }
@@ -74,10 +73,10 @@ async function updateUser(req, res, next) {
 
 async function deleteUser(req, res, next) {
   try {
-    const { pid } = req.params;
-    const responseManager = await usersManager.delete(pid);
+    const { uid } = req.params;
+    const responseManager = await usersManager.delete(uid);
     if (!responseManager) {
-      const error = new Error(`User with id ${pid} not found`);
+      const error = new Error(`User with id ${uid} not found`);
       error.statusCode = 404;
       throw error;
     }
@@ -89,12 +88,12 @@ async function deleteUser(req, res, next) {
 
 async function showUsers(req, res, next) {
   try {
-    let { mail } = req.query;
+    let { username } = req.query;
     let all;
-    if (!mail) {
+    if (username) {
       all = await usersManager.readAll();
     } else {
-      all = await usersManager.readAll(mail);
+      all = await usersManager.readAll(username);
     }
     if (all.length > 0) {
       return res.render("users", { users: all });
@@ -110,8 +109,8 @@ async function showUsers(req, res, next) {
 
 async function showOneUser(req, res, next) {
   try {
-    const { pid } = req.params;
-    const response = await usersManager.read(pid);
+    const { uid } = req.params;
+    const response = await usersManager.read(uid);
     if (response) {
       return res.render("oneuser", { one: response });
     } else {
@@ -124,7 +123,7 @@ async function showOneUser(req, res, next) {
   }
 }
 
-export {
+export{
   createUser,
   getUsers,
   getAllUsers,

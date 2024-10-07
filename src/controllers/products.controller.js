@@ -1,4 +1,4 @@
-import productsManager from "./../data/product.manager.js";
+import productsManager from "../data/products.manager.js";
 
 async function getAllProducts(req, res, next) {
   try {
@@ -14,7 +14,7 @@ async function getAllProducts(req, res, next) {
     } else {
       const error = new Error("Not found products");
       error.statusCode = 404;
-      throw reportError;
+      throw error;
     }
   } catch (error) {
     return next(error);
@@ -26,7 +26,7 @@ async function getProducts(req, res, next) {
     const { pid } = req.params;
     const response = await productsManager.read(pid);
     if (response) {
-      return res.statusCode(200).json({ message: "Product read", response });
+      return res.status(200).json({ message: "Product read", response });
     } else {
       const error = new Error("Not found product");
       error.statusCode = 404;
@@ -40,16 +40,16 @@ async function getProducts(req, res, next) {
 async function createProduct(req, res, next) {
   try {
     const { title, price, stock, photo, category, supplier } = req.body;
-    const productSupplier = supplier? supplier:"none";
-    const productCategory = category? category:"none";
-    
+    const productSupplier = supplier || "none";
+    const productCategory = category || "none";
+
     const response = await productsManager.create({
       title,
       price,
       stock,
       photo,
-      category : productCategory,
-      supplier : productSupplier,
+      category: productCategory,
+      supplier: productSupplier,
     });
     return res.status(201).json({ message: "Product created", response });
   } catch (error) {
@@ -67,9 +67,7 @@ async function updateProduct(req, res, next) {
       error.statusCode = 404;
       throw error;
     }
-    return res
-      .status(200)
-      .json({ message: "Product update", response: responseManager });
+    return res.status(200).json({ message: "Product updated", response: responseManager });
   } catch (error) {
     return next(error);
   }
@@ -84,9 +82,7 @@ async function deleteProduct(req, res, next) {
       error.statusCode = 404;
       throw error;
     }
-    return res
-      .status(200)
-      .json({ message: "Product dalete", response: responseManager });
+    return res.status(200).json({ message: "Product deleted", response: responseManager });
   } catch (error) {
     return next(error);
   }
@@ -138,3 +134,4 @@ export {
   showOneProduct,
   showProducts,
 };
+

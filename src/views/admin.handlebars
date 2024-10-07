@@ -1,0 +1,13 @@
+<div>
+{{#each products}}
+   <img src="{{this.photo}}" class="justyfyitem-center" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{this.title}}</h5>
+    </div>
+{{/each}}
+
+  <button onclick="deleteProduct({{this.id}})" id="delete-product" type="button" class="btn btn-danger">Eliminar producto</button>
+  <button id="update-product" type="button" class="btn btn-success">Modificar producto</button>
+</div>
+
+<script src="/public/scripts/delete.product.js"></script>

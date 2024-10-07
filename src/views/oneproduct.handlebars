@@ -1,4 +1,8 @@
-<h3>{{one.title}}</h3>
-<h3>{{one.price}}</h3>
-<h3>{{one.stock}}</h3>
-
+<div class="card" style="width: 18rem;"></div>
+  <img src="{{one.photo}}" class="card-img-bottom " alt="{{one.title}}">
+  <div class="card-body">
+    <h5 class="card-title">{{one.title}}</h5>
+    <p class="card-text">Precio ${{one.price}}</p>
+    <p class="card-text"> Stock : ${{one.stock}}</p>
+  </div>
+</div>

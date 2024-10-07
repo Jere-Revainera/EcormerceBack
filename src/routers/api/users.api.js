@@ -4,7 +4,7 @@ import { getAllUsers,
     createUser,
     updateUser,
     deleteUser,
-} from "../../controllers/users.controller.js"
+} from "../../controllers/users.controllers.js"
 import isValidDataUser from "../../middlewares/isValidDataUser.mid.js";
 
 

@@ -1,5 +1,3 @@
-
-
 const socketCb = (socket) => {
   console.log(socket.id);
 

@@ -1,19 +1,18 @@
 import { Router } from "express";
-import { getAllUsers,
-    getUsers,
-    createUser,
-    updateUser,
-    deleteUser,
-} from "../../controllers/users.controllers.js"
-import isValidDataUser from "../../middlewares/isValidDataUser.mid.js";
+import {
+  create,
+  destroy,
+  read,
+  readAll,
+  update,
+} from "../../mongo/controller/user.controller.js";
 
+const usersApiRouter = Router();
 
-const usersApiRouter = Router()
+usersApiRouter.post("/", create);
+usersApiRouter.get("/", readAll);
+usersApiRouter.get("/:uid", read);
+usersApiRouter.put("/:uid", update);
+usersApiRouter.delete("/:uid", destroy);
 
-usersApiRouter.get("/", getAllUsers);
-usersApiRouter.get("/:uid", getUsers);
-usersApiRouter.post("/",isValidDataUser, createUser)
-usersApiRouter.put("/:uid",updateUser)
-usersApiRouter.delete("/:uid", deleteUser)
-
-export default usersApiRouter
+export default usersApiRouter;

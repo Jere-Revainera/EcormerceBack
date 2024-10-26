@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { showOneUser,showUsers } from '../../controllers/users.controllers.js';
+import { showOne,show } from '../../mongo/controller/user.controller.js';
 
 const userViewsRouter = Router()
 
-userViewsRouter.get("/users", showUsers)
-userViewsRouter.get("/:uid", showOneUser)
+userViewsRouter.get("/users", show)
+userViewsRouter.get("/:uid", showOne)
 
 export default userViewsRouter

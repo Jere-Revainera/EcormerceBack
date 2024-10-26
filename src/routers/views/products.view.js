@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { showOneProduct, showProducts } from "../../controllers/products.controller.js";
+import { showOne, show } from "../../mongo/controller/products.controller.js";
 
 const productsViewRouter = Router()
 
-productsViewRouter.get("/", showProducts)
-productsViewRouter.get("/:pid", showOneProduct)
+productsViewRouter.get("/", show)
+productsViewRouter.get("/:pid", showOne)
 
 export default productsViewRouter
